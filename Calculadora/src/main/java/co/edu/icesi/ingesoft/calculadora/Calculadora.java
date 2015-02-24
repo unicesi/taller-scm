@@ -86,7 +86,7 @@ public class Calculadora {
 	 */
 	private void initialize() {
 		ventana = new JFrame();
-		ventana.setBounds(100, 100, 207, 212);
+		ventana.setBounds(120, 120, 225, 225);
 		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		ventana.getContentPane().setLayout(null);
 
