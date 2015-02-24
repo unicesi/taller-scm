@@ -1,0 +1,108 @@
+<!-- 
+ Copyright © 2015 Universidad Icesi
+ 
+ This file is part of Calculadora.
+ 
+ Calculadora is free software: you can redistribute it 
+ and/or modify it under the terms of the GNU General 
+ Public License as published by the Free Software 
+ Foundation, either version 3 of the License, or (at your 
+ option) any later version.
+ 
+ Calculadora is distributed in the hope that it will be 
+ useful, but WITHOUT ANY WARRANTY; without even the implied 
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR 
+ PURPOSE. See the GNU Lesser General Public License for 
+ more details.
+ 
+ You should have received a copy of the GNU General Public 
+ License along with The SLR Support Tools. If not, see 
+ <http://www.gnu.org/licenses/>.
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>Calculadora</groupId>
+	<artifactId>Calculadora</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<name>Calculadora</name>
+	<description>Calculadora para el taller de administración de la
+	configuración del curso Ingeniería de Software</description>
+	<inceptionYear>2015</inceptionYear>
+	
+	<licenses>
+		<license>
+			<name>GNU General Public License, Version 3</name>
+			<url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>Universidad Icesi</name>
+		<url>http://www.icesi.edu.co</url>
+	</organization>
+	
+	<developers>
+		<developer>
+			<id>afpaz</id>
+			<name>Andres Paz</name>
+			<email>afpaz@icesi.edu.co</email>
+			<url>http://www.icesi.edu.co/tics/afpaz</url>
+			<organization>Universidad Icesi</organization>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+	
+	<contributors>
+		<contributor>
+			<name>Estudiantes curso Ingeniería de Software</name>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</contributor>
+	</contributors>
+	
+	<properties>
+		<jdk.version>1.7</jdk.version>
+	</properties>
+
+	<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+		    	</configuration>
+		    </plugin>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathLayoutType>custom</classpathLayoutType>
+							<customClasspathLayout>lib/$${artifact.artifactId}-$${artifact.version}$${dashClassifier?}.$${artifact.extension}</customClasspathLayout>
+							<mainClass>co.edu.icesi.ingesoft.calculadora.Calculadora</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
