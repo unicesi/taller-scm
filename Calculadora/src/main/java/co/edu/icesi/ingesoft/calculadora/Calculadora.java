@@ -73,7 +73,7 @@ public class Calculadora {
 	}
 	
 	/**
-	 * Crea la aplicación.
+	 * Crea la aplicacion.
 	 */
 	public Calculadora() {
 		controladorEventosNumeros = new ControladorEventosNumeros(this);
