@@ -42,10 +42,21 @@ public class ControladorOperaciones {
 		return resultado;
 	}
 	
+	public double multiplicacion(double a , double b){
+		
+		return a*b;
+	}
+
+	
+	private double division (double dividendo, double divisor){
+		return (divisor/dividendo);
+	}
 	public double suma(double a, double b){
 		
+
 		return a + b; 
 		
+
 	}
 	
 	
