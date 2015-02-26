@@ -25,6 +25,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Stack;
 
+import javax.swing.JOptionPane;
+
 import co.edu.icesi.ingesoft.calculadora.operaciones.ControladorOperaciones;
 
 /**
@@ -71,8 +73,16 @@ public class ControladorEventosOperaciones implements ActionListener {
 				this.pila.push(operacion);
 				this.calculadora.limpiarTextoDePantalla();
 			} else {
+				if(pila.size() == 0){
+					JOptionPane.showMessageDialog(null, "Viejo tiene que poner un número", 
+							"Asado", JOptionPane.ERROR_MESSAGE);
+				}
+				
+				else{
+				
 				this.pila.pop();
 				this.pila.push(operacion);
+				}
 			}
 			break;
 			
