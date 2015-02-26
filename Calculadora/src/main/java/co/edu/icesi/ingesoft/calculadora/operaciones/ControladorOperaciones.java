@@ -44,6 +44,9 @@ public class ControladorOperaciones {
 	
 	public double suma(double a, double b){
 		
-		return a + b;
+		return a + b; 
+		
 	}
+	
+	
 }
