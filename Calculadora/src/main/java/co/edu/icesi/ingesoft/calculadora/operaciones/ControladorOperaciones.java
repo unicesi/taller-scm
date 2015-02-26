@@ -42,9 +42,14 @@ public class ControladorOperaciones {
 		return resultado;
 	}
 	
+
 	
 	private double division (double dividendo, double divisor){
 		return (divisor/dividendo);
+	}
+	public double suma(double a, double b){
 		
+		return a + b;
+
 	}
 }
