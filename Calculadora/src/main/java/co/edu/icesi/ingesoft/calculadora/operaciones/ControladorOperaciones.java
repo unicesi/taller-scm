@@ -42,4 +42,8 @@ public class ControladorOperaciones {
 		return resultado;
 	}
 	
+	public double suma(double a, double b){
+		
+		return a + b;
+	}
 }
